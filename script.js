@@ -44,7 +44,7 @@ function createRecognition(){
                 var j = i
                 element += " " + gravacao[j + 1]
                 element += " " + gravacao[j + 2]
-                input.value += element + ", "
+                input.value += element + " "
                 
             }
             sintomas.forEach(sintoma => {
