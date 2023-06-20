@@ -16,3 +16,8 @@ Recomendo o XAMPP (já vem todos os pacotes instalador)
 
 # Usuarios
 
+|Login | Senha|
+|------|------|
+|teste|teste|
+|marcelo|123|
+
