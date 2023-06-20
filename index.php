@@ -1,3 +1,8 @@
+<?php
+include('./verificador.php');
+include('./bloqueador.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -13,6 +18,7 @@
 
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand font-weight-bold" href="#">Paciente</a>
+        <a class="text-decoration-none text-white" href="./logout.php">Sair</a>
     </nav>
     <div class="container geral d-flex justify-content-center flex-wrap align-items-center text-center h-100">
         <div class="col-12">

@@ -1,3 +1,9 @@
+<?php
+include('verificador.php');
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -13,16 +19,27 @@
         <a class="navbar-brand font-weight-bold" href="#">Sistema de Gestão</a>
     </nav>
     <div class="container d-flex justify-content-center align-items-center h-100">
+        
+
         <div class="col-12">
+            <?php
+                if($_SESSION['userSenha']){
+                    ?>
+                    <div class="alert alert-danger" role="alert">Senha ou usuário incorreto. Tente novamente</div>
+                    <?php
+                }
+            ?>
             <h3 class="text-center font-weight-bold">Autenticação de Usuário</h3>
-            <form action="" class="p-0 m-auto" method="post">
+
+
+            <form action="testeLogin.php" class="p-0 m-auto" method="post">
                     <div class="form-group col-md-6 offset-3 my-4 font-weight-bold">
                         <label for="login">Login</label>
                         <input type="text" class="form-control border border-dark" id="login" name="login" placeholder="Insira seu e-mail aqui">
                     </div>
                     <div class="form-group col-md-6 offset-3 my-4 font-weight-bold">
                         <label for="senha">Senha</label>
-                        <input type="password" class="form-control border border-dark" id="login" name="login"  placeholder="Insira sua senha aqui">
+                        <input type="password" required class="form-control border border-dark" id="senha" name="senha"  placeholder="Insira sua senha aqui">
                     </div>
                     <div class="col-md-6 offset-3 my-4"><button type="submit" class="btn btn-success col-md-3 mr-2">Entrar</button><button type="button" id="cadastrar" class="btn btn-primary col-md-3"><a href="./cadastrar.html"  class="h-100 w-100 text-white text-decoration-none">Cadastrar</a></button></div>
                 </div>

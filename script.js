@@ -3,7 +3,7 @@ var input = document.querySelector('#sintomas')
 var log = document.querySelector('#log')
 var gravando = false
 var gravacao = null
-var sintomas = ['febre', 'erupções', 'bolhas', 'inchaço', 'tosse', 'nariz', 'falta', 'ar', 'dificuldade', 'respiratória']
+var sintomas = ['febre', 'erupções', 'bolhas', 'inchaço', 'tosse', 'nariz', 'falta', 'ar', 'dificuldade', 'respiratória', 'nausea']
 
 
 var recognition = new createRecognition()
@@ -37,7 +37,6 @@ function createRecognition(){
         log.value = gravacao
         gravacao = gravacao.split(" ")
         
-        
         for (let i = 0; i < gravacao.length; i++) {
             var element = gravacao[i];
             if (element == 'dor') {
@@ -57,7 +56,7 @@ function createRecognition(){
         
 
 
-        /* console.log(gravacao) */
+        
     } 
 
     /* retorno da função */

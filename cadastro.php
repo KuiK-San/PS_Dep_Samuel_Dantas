@@ -9,4 +9,4 @@ $query = "INSERT INTO `users`( `mail`, `pass`, `type`) VALUES ('$login','$senha'
 
 $sql = mysqli_query($conexao, $query);
 
-header("location: ./login.html");
+header("location: ./login.php");
